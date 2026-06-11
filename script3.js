@@ -10,11 +10,10 @@ const data = [
   { text: "Chkilita", images: ["chkilita.jpg"] },
   { text: "9ri9irty", images: ["frog.jpg"] },
 
-  {
-    text: "Eating & sleeping under people 😂",
-    images: ["eatinng.jpg"],
-    video: "hobby.mp4"
-  },
+ {
+  text: "Eating & sleeping under people ",
+  images: ["eatinng.jpg", "slep.jpeg"]
+},
 
   { text: "dima kahdraaa", images: ["raja.jpg"] },
   { text: "A777 my type ", images: ["my_type.jpeg"] },

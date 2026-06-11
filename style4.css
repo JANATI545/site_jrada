@@ -145,3 +145,80 @@ body{
   0% { transform: scale(1) rotate(-2deg); }
   100% { transform: scale(1.05) rotate(2deg); }
 }
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+
+@media screen and (max-width: 768px){
+
+  body{
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 15px;
+  }
+
+  .comic-card{
+    width: 95%;
+    max-width: 100%;
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .title{
+    font-size: 22px;
+  }
+
+  .subtitle{
+    font-size: 24px;
+  }
+
+  .text,
+  .comic-text{
+    font-size: 14px;
+  }
+
+  .img-box img{
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .back-btn{
+    left: 10px;
+    bottom: 10px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px){
+
+  .comic-card{
+    width: 100%;
+    padding: 15px;
+  }
+
+  .title{
+    font-size: 18px;
+  }
+
+  .subtitle{
+    font-size: 20px;
+  }
+
+  .stamp{
+    font-size: 12px;
+  }
+
+  .img-box img{
+    width: 140px;
+  }
+
+  .comic-text,
+  .text,
+  .sfx{
+    font-size: 13px;
+  }
+}

@@ -380,95 +380,56 @@ p{
   cursor: pointer;
   transform: scale(1.05);
 }
-/* =========================
-   MOBILE RESPONSIVE
-   ========================= */
-
-@media screen and (max-width: 768px){
+@media (max-width: 768px){
 
   body{
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding: 15px;
+    height:auto;
+    min-height:100vh;
+    overflow-y:auto;
+    overflow-x:hidden;
+    display:block;
+    padding:15px;
   }
 
   .container{
-    width: 95%;
-    padding: 20px;
-    margin: 80px auto;
+    width:100%;
+    max-width:100%;
+    margin:20px auto;
+    box-sizing:border-box;
   }
 
-  h1,
-  .comic-title{
-    font-size: 24px;
-  }
+  .check-panel,
+  .info-panel{
+    position:relative;
+    left:auto;
+    right:auto;
+    top:auto;
+    transform:none;
 
-  p{
-    font-size: 15px;
+    width:100%;
+    max-width:100%;
+    margin:15px auto;
+
+    box-sizing:border-box;
   }
 
   .buttons-container{
-    grid-template-columns: 1fr;
+    grid-template-columns:1fr;
   }
 
-  .cute-btn{
-    width: 100%;
+  h1{
+    font-size:24px;
   }
 
-  .check-panel{
-    position: static;
-    transform: none;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .info-panel{
-    position: static;
-    transform: none;
-    width: 100%;
-    margin-top: 20px;
-    box-sizing: border-box;
+  .comic-title{
+    font-size:22px;
   }
 
   .back-btn{
-    left: 10px;
-    bottom: 10px;
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-
-  .love-banner{
-    font-size: 14px;
-  }
-
-  #image_jrada img{
-    max-width: 250px;
-    margin: auto;
-    display: block;
-  }
-
-  .final-btn{
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 480px){
-
-  h1,
-  .comic-title{
-    font-size: 20px;
-  }
-
-  .container{
-    padding: 15px;
-  }
-
-  .cute-btn{
-    font-size: 14px;
-    padding: 12px;
-  }
-
-  p{
-    font-size: 14px;
+    position:relative;
+    left:auto;
+    bottom:auto;
+    display:block;
+    margin:15px auto;
   }
 }

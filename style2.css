@@ -278,145 +278,141 @@ h1 {
 /* =========================
    RESPONSIVE PC / TABLET / PHONE
    ========================= */
+/* =========================
+   MOBILE / TABLET
+   ========================= */
 
 @media screen and (max-width: 768px){
 
+  html,
   body{
-    overflow-x: hidden;
+    width:100%;
+    overflow-x:hidden;
+  }
+
+  body{
+    height:auto;
+    min-height:100vh;
+    overflow-y:auto;
   }
 
   h1{
-    font-size: 32px;
-    text-align: center;
-    padding: 0 15px;
+    font-size:28px;
+    text-align:center;
+    padding:0 15px;
   }
 
   p{
-    font-size: 18px;
-    text-align: center;
-    padding: 0 15px;
+    font-size:16px;
+    text-align:center;
+    padding:0 15px;
   }
 
   .text{
-    width: 90%;
-    top: 8%;
+    width:95%;
+    top:5%;
+    left:50%;
+    transform:translateX(-50%);
   }
 
   .line{
-    flex-wrap: wrap;
-    white-space: normal;
-    gap: 8px;
+    flex-wrap:wrap;
+    white-space:normal;
+    gap:8px;
   }
 
   .sticker{
-    width: 50px;
-    height: 50px;
+    width:50px;
+    height:50px;
   }
 
+  /* ❤️ PANEL MAYB9ACH FO9 BUTTON */
   .cute-box{
-    width: 85%;
-    max-width: 320px;
-    left: 50%;
-    top: auto;
-    bottom: 20px;
-    transform: translateX(-50%);
-    padding: 15px;
+    position:relative;
+
+    left:auto;
+    top:auto;
+    bottom:auto;
+
+    transform:none;
+
+    width:90%;
+    max-width:320px;
+
+    margin:30px auto 120px auto;
+
+    padding:15px;
+
+    box-sizing:border-box;
   }
 
   .cute-title{
-    font-size: 20px;
+    font-size:20px;
   }
 
   .cute-box p{
-    font-size: 16px;
+    font-size:15px;
+  }
+
+  .buttons{
+    position:fixed;
+    bottom:15px;
+    left:0;
+    width:100%;
+    z-index:9999;
   }
 
   #backBtn{
-    left: 10px;
-    bottom: 10px;
+    left:10px;
+    bottom:10px;
   }
 
   #sorryBtn{
-    font-size: 18px;
-    padding: 15px 30px;
-    max-width: 90%;
+    left:50%;
+    bottom:10px;
+
+    font-size:16px;
+    padding:12px 24px;
+
+    max-width:85%;
   }
 
   body::before{
-    border-width: 3px;
-    padding: 3px;
+    border-width:3px;
+    padding:3px;
   }
 }
 
 @media screen and (max-width: 480px){
 
   h1{
-    font-size: 26px;
+    font-size:24px;
   }
 
   p{
-    font-size: 15px;
+    font-size:14px;
   }
 
   .sticker{
-    width: 40px;
-    height: 40px;
+    width:40px;
+    height:40px;
   }
 
   .cute-box{
-    width: 90%;
-    padding: 12px;
+    width:92%;
+    padding:12px;
   }
 
   .cute-title{
-    font-size: 18px;
+    font-size:18px;
   }
 
   .cute-box p{
-    font-size: 14px;
+    font-size:14px;
   }
 
   #sorryBtn{
-    font-size: 16px;
-    padding: 12px 24px;
+    font-size:15px;
+    padding:10px 20px;
   }
-}
-@media screen and (max-width: 768px){
-
-  body{
-    overflow-x:hidden;
-  }
-
-  h1{
-    font-size:28px;
-    width:90%;
-    margin:auto;
-    text-align:center;
-  }
-
-  p{
-    width:90%;
-    margin:auto;
-    text-align:center;
-  }
-
-  .text{
-    width:95%;
-    left:50%;
-    transform:translateX(-50%);
-  }
-
-  .cute-box{
-    width:80%;
-    max-width:300px;
-  }
-
-}
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-* {
-  box-sizing: border-box;
 }

@@ -275,3 +275,148 @@ h1 {
     50%{transform:scale(1.2);}
     100%{transform:scale(1);}
 }
+/* =========================
+   RESPONSIVE PC / TABLET / PHONE
+   ========================= */
+
+@media screen and (max-width: 768px){
+
+  body{
+    overflow-x: hidden;
+  }
+
+  h1{
+    font-size: 32px;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  p{
+    font-size: 18px;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .text{
+    width: 90%;
+    top: 8%;
+  }
+
+  .line{
+    flex-wrap: wrap;
+    white-space: normal;
+    gap: 8px;
+  }
+
+  .sticker{
+    width: 50px;
+    height: 50px;
+  }
+
+  .cute-box{
+    width: 85%;
+    max-width: 320px;
+    left: 50%;
+    top: auto;
+    bottom: 20px;
+    transform: translateX(-50%);
+    padding: 15px;
+  }
+
+  .cute-title{
+    font-size: 20px;
+  }
+
+  .cute-box p{
+    font-size: 16px;
+  }
+
+  #backBtn{
+    left: 10px;
+    bottom: 10px;
+  }
+
+  #sorryBtn{
+    font-size: 18px;
+    padding: 15px 30px;
+    max-width: 90%;
+  }
+
+  body::before{
+    border-width: 3px;
+    padding: 3px;
+  }
+}
+
+@media screen and (max-width: 480px){
+
+  h1{
+    font-size: 26px;
+  }
+
+  p{
+    font-size: 15px;
+  }
+
+  .sticker{
+    width: 40px;
+    height: 40px;
+  }
+
+  .cute-box{
+    width: 90%;
+    padding: 12px;
+  }
+
+  .cute-title{
+    font-size: 18px;
+  }
+
+  .cute-box p{
+    font-size: 14px;
+  }
+
+  #sorryBtn{
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+@media screen and (max-width: 768px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  h1{
+    font-size:28px;
+    width:90%;
+    margin:auto;
+    text-align:center;
+  }
+
+  p{
+    width:90%;
+    margin:auto;
+    text-align:center;
+  }
+
+  .text{
+    width:95%;
+    left:50%;
+    transform:translateX(-50%);
+  }
+
+  .cute-box{
+    width:80%;
+    max-width:300px;
+  }
+
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}

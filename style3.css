@@ -380,41 +380,23 @@ p{
   cursor: pointer;
   transform: scale(1.05);
 }
-@media (max-width: 768px){
+@media (max-width:768px){
 
   body{
+    display:block;
     height:auto;
     min-height:100vh;
     overflow-y:auto;
-    overflow-x:hidden;
-    display:block;
-    padding:15px;
+    padding:10px;
   }
 
+  /* CARD principale */
   .container{
-    width:100%;
-    max-width:100%;
+    width:95%;
+    max-width:400px;
     margin:20px auto;
-    box-sizing:border-box;
-  }
-
-  .check-panel,
-  .info-panel{
-    position:relative;
-    left:auto;
-    right:auto;
-    top:auto;
-    transform:none;
-
-    width:100%;
-    max-width:100%;
-    margin:15px auto;
-
-    box-sizing:border-box;
-  }
-
-  .buttons-container{
-    grid-template-columns:1fr;
+    padding:20px;
+    animation:none;
   }
 
   h1{
@@ -422,14 +404,59 @@ p{
   }
 
   .comic-title{
-    font-size:22px;
+    font-size:20px;
   }
 
-  .back-btn{
-    position:relative;
-    left:auto;
-    bottom:auto;
-    display:block;
+  p{
+    font-size:14px;
+  }
+
+  /* buttons wa7d ta7t wa7d */
+  .buttons-container{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .cute-btn{
+    width:100%;
+  }
+
+  /* panel lisar */
+  .check-panel{
+    position:static;
+    width:95%;
+    max-width:400px;
     margin:15px auto;
+    transform:none;
+  }
+
+  /* panel limn */
+  .info-panel{
+    position:static;
+    width:95%;
+    max-width:400px;
+    margin:15px auto;
+    transform:none;
+  }
+
+  #image_jrada img{
+    max-width:220px;
+    margin:auto;
+    display:block;
+  }
+
+  /* back button */
+  .back-btn{
+    position:fixed;
+    bottom:10px;
+    left:10px;
+    z-index:9999;
+    padding:10px 14px;
+    font-size:14px;
+  }
+
+  .final-btn{
+    width:100%;
   }
 }

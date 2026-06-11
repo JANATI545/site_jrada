@@ -281,68 +281,63 @@ h1 {
 /* =========================
    MOBILE / TABLET
    ========================= */
-
-@media screen and (max-width: 768px){
+/* =========================
+   PHONE / TABLET
+   ========================= */
+@media screen and (max-width:768px){
 
   html,
   body{
     width:100%;
     overflow-x:hidden;
-  }
-
-  body{
-    height:auto;
-    min-height:100vh;
     overflow-y:auto;
   }
 
-  h1{
-    font-size:28px;
-    text-align:center;
-    padding:0 15px;
+  body{
+    min-height:100vh;
   }
 
-  p{
-    font-size:16px;
-    text-align:center;
-    padding:0 15px;
-  }
-
+  /* TITLE */
   .text{
+    position:relative;
+    top:auto;
+    left:auto;
+    transform:none;
+
     width:95%;
-    top:5%;
-    left:50%;
-    transform:translateX(-50%);
+    margin:20px auto;
+    text-align:center;
   }
 
   .line{
     flex-wrap:wrap;
-    white-space:normal;
+    justify-content:center;
     gap:8px;
   }
 
-  .sticker{
-    width:50px;
-    height:50px;
+  h1{
+    font-size:28px;
   }
 
-  /* ❤️ PANEL MAYB9ACH FO9 BUTTON */
+  .sticker{
+    width:45px;
+    height:45px;
+  }
+
+  /* PANEL */
   .cute-box{
     position:relative;
 
     left:auto;
     top:auto;
-    bottom:auto;
-
     transform:none;
 
     width:90%;
     max-width:320px;
 
-    margin:30px auto 120px auto;
+    margin:20px auto 100px auto;
 
     padding:15px;
-
     box-sizing:border-box;
   }
 
@@ -352,12 +347,14 @@ h1 {
 
   .cute-box p{
     font-size:15px;
+    padding:0;
   }
 
+  /* BUTTONS */
   .buttons{
     position:fixed;
-    bottom:15px;
     left:0;
+    bottom:10px;
     width:100%;
     z-index:9999;
   }
@@ -365,11 +362,14 @@ h1 {
   #backBtn{
     left:10px;
     bottom:10px;
+    font-size:14px;
+    padding:10px 15px;
   }
 
   #sorryBtn{
     left:50%;
     bottom:10px;
+    transform:translateX(-50%);
 
     font-size:16px;
     padding:12px 24px;
@@ -383,14 +383,11 @@ h1 {
   }
 }
 
-@media screen and (max-width: 480px){
+/* SMALL PHONES */
+@media screen and (max-width:480px){
 
   h1{
     font-size:24px;
-  }
-
-  p{
-    font-size:14px;
   }
 
   .sticker{

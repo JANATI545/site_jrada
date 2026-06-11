@@ -1,0 +1,324 @@
+body{
+    margin:0;
+    overflow:hidden;
+    font-family:'Arial',sans-serif;
+}
+
+/* VIDEO PAGE */
+#videoPage{
+    display:none;
+    width:100vw;
+    height:100vh;
+    background:black;
+    justify-content:center;
+    align-items:center;
+}
+
+#videoPage video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* MAIN PAGE */
+#mainPage{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+    color:white;
+    position:relative;
+    padding-top:60px;
+    overflow:hidden;
+}
+#container{
+    position:absolute;
+    left:50%;
+    top:220px;
+    transform:translateX(-50%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
+
+/* PAGE 2 */
+#page2{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:100vw;
+    height:100vh;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+/* BACKGROUND */
+.bg{
+    position:absolute;
+    width:200%;
+    height:200%;
+    background:linear-gradient(
+        45deg,
+        #ff4d6d,
+        #ff9a9e,
+        #c471ed,
+        #7b2ff7,
+        #ff4d6d
+    );
+    background-size:400% 400%;
+    animation:gradientMove 12s ease infinite;
+    z-index:-1;
+    filter:blur(35px);
+    transform:translate(-25%,-25%);
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* TITRES */
+h1{
+    font-size:60px;
+    margin-bottom:15px;
+    text-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+p{
+    font-size:24px;
+    margin-bottom:30px;
+    text-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+/* =========================
+   IMPORTANT FIX (YES MOVE JS)
+========================= */
+#container{
+    position:absolute;   /* IMPORTANT pour ton JS */
+    left:50%;
+    top:220px;
+    transform:translateX(-50%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
+
+/* MSG */
+#msg{
+    min-height:30px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* YES BUTTON (KEEP ANIMATION JS) */
+#yes{
+   
+    margin-top:60px; /* جرّب 20px - 60px */
+
+    width:220px;
+    height:65px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:22px;
+    font-weight:bold;
+    color:white;
+
+    background:linear-gradient(135deg,#00e676,#00c853);
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* hover (OPTIONAL) */
+#yes:hover{
+    transform:scale(1.05);
+}
+
+/* NO BUTTON */
+#no{
+    width:220px;
+    height:65px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:22px;
+    font-weight:bold;
+    color:white;
+
+    background:linear-gradient(135deg,#ff4d6d,#ff1744);
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    position:absolute;
+    bottom:80px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+
+
+/* HEART */
+#heart{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:120px;
+    display:none;
+}
+
+/* ANIMATIONS */
+@keyframes splitLeft{
+    from{transform:translate(-50%,-50%); opacity:1;}
+    to{transform:translate(-200%,-50%); opacity:0;}
+}
+
+@keyframes splitRight{
+    from{transform:translate(-50%,-50%); opacity:1;}
+    to{transform:translate(100%,-50%); opacity:0;}
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    h1{font-size:38px;}
+    p{font-size:18px;}
+
+    #yes,#no{
+        width:170px;
+        height:55px;
+        font-size:18px;
+    }
+}
+p{
+    animation: floatText 2s ease-in-out infinite;
+}
+
+@keyframes floatText{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+p{
+    font-size:26px;
+    font-weight:bold;
+    color:white;
+
+    padding:15px 25px;
+    border-radius:15px;
+
+    display:inline-block;
+
+    background:rgba(0,0,0,0.3);
+
+    border:2px solid #ff4d6d;
+
+    box-shadow:
+        0 0 10px #ff4d6d,
+        0 0 20px #ff4d6d,
+        0 0 40px rgba(255,77,109,0.6);
+
+    text-shadow:0 0 10px rgba(255,255,255,0.5);
+
+    animation: glowPulse 2s infinite;
+}
+
+/* glow animation */
+@keyframes glowPulse{
+    0%{
+        box-shadow:
+        0 0 10px #ff4d6d,
+        0 0 20px #ff4d6d;
+        transform:translateY(0);
+    }
+    50%{
+        box-shadow:
+        0 0 20px #ff4d6d,
+        0 0 40px #ff4d6d,
+        0 0 60px rgba(255,77,109,0.8);
+        transform:translateY(-5px);
+    }
+    100%{
+        box-shadow:
+        0 0 10px #ff4d6d,
+        0 0 20px #ff4d6d;
+        transform:translateY(0);
+    }
+}#question{
+    font-size:24px;
+    font-weight:bold;
+    color:#fff;
+
+    padding:18px 30px;
+    border-radius:20px;
+
+    display:inline-block;
+
+    /* 🔥 dark + red fire background */
+    background:linear-gradient(
+        135deg,
+        rgba(0,0,0,0.85),
+        rgba(255,0,0,0.25)
+    );
+
+    border:1px solid rgba(255,0,0,0.6);
+
+    box-shadow:
+        0 0 10px rgba(255,0,0,0.5),
+        0 0 25px rgba(255,0,0,0.4),
+        0 0 50px rgba(0,0,0,0.8);
+
+    text-shadow:
+        0 0 8px rgba(255,0,0,0.8),
+        0 0 15px rgba(0,0,0,0.9);
+
+    position:relative;
+
+    animation: fireFloat 2.5s ease-in-out infinite;
+}
+
+/* 🔥 floating fire movement */
+@keyframes fireFloat{
+    0%{
+        transform:translateY(0);
+        box-shadow:
+        0 0 10px rgba(255,0,0,0.4),
+        0 0 25px rgba(0,0,0,0.8);
+    }
+    50%{
+        transform:translateY(-8px);
+        box-shadow:
+        0 0 20px rgba(255,0,0,0.7),
+        0 0 40px rgba(0,0,0,0.9);
+    }
+    100%{
+        transform:translateY(0);
+        box-shadow:
+        0 0 10px rgba(255,0,0,0.4),
+        0 0 25px rgba(0,0,0,0.8);
+    }
+}
+/* floating animation */
+@keyframes floatCard{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* small glow on hover */
+#question:hover{
+    transform:scale(1.05);
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+    transition:0.3s;
+}

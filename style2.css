@@ -1,0 +1,277 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  color: white;
+  position: relative;
+}
+
+/* 🌑 BLACK + RED background */
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #1a0000, #000000);
+  z-index: -2;
+}
+
+/* 🌈 neon moving border */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  border: 5px solid transparent;
+
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff4d4d,
+    #000000,
+    #ff0000
+  );
+
+  background-size: 300% 300%;
+  animation: borderMove 4s linear infinite;
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  padding: 5px;
+  pointer-events: none;
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* 📌 text position */
+.text {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+/* ⭐ text + sticker same line */
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+/* 🔥 BIG TEXT */
+h1 {
+  margin: 0;
+  font-size: 55px;
+  color: white;
+
+  text-shadow:
+    0 0 5px red,
+    0 0 15px red,
+    0 0 30px red,
+    0 0 60px darkred;
+
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow:
+      0 0 5px red,
+      0 0 10px red,
+      0 0 20px red;
+  }
+
+  to {
+    text-shadow:
+      0 0 20px red,
+      0 0 40px red,
+      0 0 80px darkred;
+  }
+}
+
+/* ⭐ sticker beside title */
+.sticker {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* 🎉 flying stickers everywhere */
+.flying-sticker {
+  position: fixed;
+  pointer-events: none;
+  z-index: 5;
+
+  animation: crazyMove linear forwards;
+}
+
+@keyframes crazyMove {
+
+  0% {
+    opacity: 0;
+    transform:
+      translateY(100px)
+      translateX(0)
+      rotate(0deg)
+      scale(0.4);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  30% {
+    transform:
+      translateY(-50px)
+      translateX(60px)
+      rotate(120deg)
+      scale(0.8);
+  }
+
+  60% {
+    transform:
+      translateY(-180px)
+      translateX(-60px)
+      rotate(240deg)
+      scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translateY(-400px)
+      translateX(100px)
+      rotate(360deg)
+      scale(1.4);
+  }
+}
+.buttons{
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+}
+
+/* 🔙 Go Back (يسار لتحت) */
+#backBtn{
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+  background: black;
+  color: white;
+}
+
+/* ❤️ Sorry (وسط لتحت) */
+#sorryBtn{
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  background: #ff4d6d;
+  color: white;
+
+  font-size: 28px;   /* 🔥 كبرنا الخط */
+  padding: 25px 60px; /* 🔥 كبرنا الزر */
+  border-radius: 50px;
+
+  box-shadow: 0 0 20px red, 0 0 40px darkred;
+  animation: pulse 1.5s infinite;
+}
+@keyframes explodeMove {
+  from {
+    transform: translate(0,9) scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate(var(--x), var(--y)) scale(1);
+    opacity: 0;
+  }
+}
+.flying-sticker{
+    position: fixed;
+    z-index: 99999;
+    pointer-events: none;
+}
+.cute-box{
+    position: fixed;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 300px;
+    padding: 22px;
+
+    background: linear-gradient(
+        135deg,
+        #ffd6e7,
+        #ffc2d9,
+        #ffb3c6
+    );
+
+    border-radius: 30px;
+
+    border: 4px solid white;
+
+    box-shadow:
+        0 10px 30px rgba(255,105,180,0.4),
+        0 0 20px rgba(255,255,255,0.8);
+
+    text-align: center;
+    color: #8b004f;
+
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.cute-title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cute-box p{
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.heart{
+    display: block;
+    margin-top: 12px;
+    font-size: 35px;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}

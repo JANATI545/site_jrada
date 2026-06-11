@@ -1,0 +1,147 @@
+body{
+  margin: 0;
+  height: 100vh;
+  font-family: "Arial Black", sans-serif;
+  overflow: hidden;
+
+  background: repeating-linear-gradient(
+    45deg,
+    #ff4d6d,
+    #ff4d6d 10px,
+    #ffb3c1 10px,
+    #ffb3c1 20px
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 💥 CARD COMIC */
+.comic-card{
+  text-align: center;
+  width: 80%;
+  max-width: 520px;
+
+  background: white;
+  border: 5px solid black;
+  border-radius: 20px;
+
+  box-shadow: 10px 10px 0 black;
+
+  padding: 25px;
+
+  animation: pop 0.6s ease;
+}
+
+@keyframes pop{
+  from{transform: scale(0.5); opacity: 0;}
+  to{transform: scale(1); opacity: 1;}
+}
+
+/* 💥 STAMP */
+.stamp{
+  background: yellow;
+  display: inline-block;
+  padding: 5px 12px;
+  border: 3px solid black;
+  transform: rotate(-10deg);
+  font-weight: bold;
+}
+
+/* TITLE */
+.title{
+  font-size: 26px;
+  color: black;
+  text-shadow: 2px 2px 0 #ff4d6d;
+}
+
+/* SUBTITLE */
+.subtitle{
+  font-size: 30px;
+  color: #ff0054;
+  text-shadow: 2px 2px 0 black;
+  animation: shake 1s infinite;
+}
+
+@keyframes shake{
+  0%{transform: rotate(-2deg);}
+  50%{transform: rotate(2deg);}
+  100%{transform: rotate(-2deg);}
+}
+
+/* TEXT */
+.text{
+  font-size: 14px;
+  color: black;
+}
+
+/* IMAGE */
+.img-box img{
+  width: 220px;
+  border: 4px solid black;
+  border-radius: 10px;
+
+  box-shadow: 5px 5px 0 #ff4d6d;
+
+  animation: bounce 1.2s infinite;
+}
+
+@keyframes bounce{
+  0%{transform: translateY(0);}
+  50%{transform: translateY(-8px);}
+  100%{transform: translateY(0);}
+}
+
+/* SOUND EFFECT TEXT */
+.sfx{
+  margin-top: 10px;
+  font-size: 16px;
+  color: black;
+  letter-spacing: 2px;
+}
+
+/* 🔙 BACK BUTTON */
+.back-btn{
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+
+  padding: 12px 18px;
+  border: 3px solid black;
+  background: yellow;
+  font-weight: bold;
+
+  cursor: pointer;
+  box-shadow: 4px 4px 0 black;
+
+  transition: 0.2s;
+}
+
+.back-btn:hover{
+  transform: scale(1.1) rotate(-3deg);
+}
+.comic-text{
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+
+  color: #ff2e63;
+
+  background: linear-gradient(135deg, #fff0f5, #ffe4f0);
+  padding: 12px 18px;
+  border-radius: 20px;
+
+  border: 3px dashed #ff4d6d;
+
+  box-shadow: 0 10px 25px rgba(255, 77, 109, 0.3);
+
+  transform: rotate(-2deg);
+
+  animation: popDisney 1.5s infinite alternate;
+}
+
+/* ✨ Disney pop animation */
+@keyframes popDisney {
+  0% { transform: scale(1) rotate(-2deg); }
+  100% { transform: scale(1.05) rotate(2deg); }
+}

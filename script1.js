@@ -54,17 +54,19 @@ function updateMsg(){
 
 function move(){
 
+  const padding = 20;
+
   const rect = container.getBoundingClientRect();
 
-  const maxX = window.innerWidth - rect.width;
-  const maxY = window.innerHeight - rect.height;
+  const maxX = window.innerWidth - rect.width - padding;
+  const maxY = window.innerHeight - rect.height - padding;
 
   const x = Math.random() * maxX;
   const y = Math.random() * maxY;
 
+  container.style.position = "fixed";
   container.style.left = x + "px";
   container.style.top = y + "px";
-
   container.style.transform = "none";
 
   updateMsg();

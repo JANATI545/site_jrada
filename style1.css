@@ -1,6 +1,6 @@
 body{
-    overflow-x: hidden;
-  overflow-y: hidden;
+    /*overflow-x: hidden;
+  overflow-y: hidden;*/
     margin:0;
     overflow:hidden;
     font-family:'Arial',sans-serif;

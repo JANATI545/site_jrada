@@ -408,8 +408,10 @@ h1 {
     font-size:14px;
   }
 
-  #sorryBtn{
-    font-size:15px;
-    padding:10px 20px;
-  }
+#sorryBtn{
+  font-size:22px;   /* 🔥 كبر الخط */
+  padding:16px 35px; /* 🔥 كبر الزر */
+  border-radius: 40px;
+  box-shadow: 0 0 25px red, 0 0 50px darkred;
+}
 }

@@ -341,7 +341,8 @@ p{
   }
 
   #yes{
-    margin-top:20px;
+    margin-top:10px;
+    transform: translateY(-10px);
   }
 
   #no{

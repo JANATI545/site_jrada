@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
       showNewStickers();
 
       // ❤️ après 20 clics → Page 3
-      if (clickCount >= 10) {
+      if (clickCount >= 5) {
         window.location.href = "page3.html";
       }
     });

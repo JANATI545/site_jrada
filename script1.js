@@ -54,19 +54,14 @@ function updateMsg(){
 
 function move(){
 
-    const maxX = window.innerWidth - 250;
-    const minX = 20;
+  const range = 250; // حجم الهروب
 
-    const minY = 180;
-    const maxY = window.innerHeight - 250;
+  const x = (Math.random() * range * 2) - range;
+  const y = (Math.random() * range * 2) - range;
 
-    const x = Math.random() * (maxX - minX) + minX;
-    const y = Math.random() * (maxY - minY) + minY;
+  container.style.transform = `translate(${x}px, ${y}px)`;
 
-    container.style.left = x + "px";
-    container.style.top = y + "px";
-
-    updateMsg();
+  updateMsg();
 }
 
 yesBtn.addEventListener("mouseover", move);

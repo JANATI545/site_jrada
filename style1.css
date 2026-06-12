@@ -1,4 +1,6 @@
 body{
+    overflow-x: hidden;
+  overflow-y: hidden;
     margin:0;
     overflow:hidden;
     font-family:'Arial',sans-serif;
@@ -351,4 +353,17 @@ p{
     left:50%;
     transform:translateX(-50%);
   }
+
+  @media(max-width:768px){
+
+  body{
+    overflow:hidden;
+  }
+
+#container{
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
 }

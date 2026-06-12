@@ -242,3 +242,8 @@ p{
         bottom:20px;
     }
 }
+@media (max-width:768px){
+    #no{
+        transform: translateY(-15px);
+    }
+}

@@ -71,8 +71,8 @@ p{
 }
 
 .hearts{
-  font-size: 30px;
-  margin-top: 15px;
+  font-size: 20px;
+  margin-top: 10px;
   animation: heartbeat 1.5s infinite;
   color: #ffffff;
 }
@@ -298,11 +298,14 @@ p{
 
 #image_jrada img{
   width: 100%;
+  max-width: 180px;   /* 👈 مهم: كيصغر فـ PC */
+  height: auto;
+
   border-radius: 15px;
 
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 
-  animation: swing 0.8s infinite alternate;
+  object-fit: cover;
 }
 
 @keyframes swing{
@@ -517,5 +520,49 @@ p{
 
   .container{
     padding:15px;
+  }
+}
+.love-note{
+  padding: 14px 18px;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(12px);
+
+  text-align: center;
+  font-size: 15px;
+  color: #4a1c2a;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+  animation: floaty 3s ease-in-out infinite;
+}
+
+@keyframes floaty{
+  0%{transform: translateY(0);}
+  50%{transform: translateY(-6px);}
+  100%{transform: translateY(0);}
+}
+.info-panel{
+  width: 220px;
+  max-width: 90%;
+}
+@media (min-width: 768px){
+  #image_jrada img{
+    max-width: 150px;
+  }
+
+  .info-panel{
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px){
+  #image_jrada img{
+    max-width: 120px;
+  }
+
+  .info-panel{
+    width: 90%;
   }
 }

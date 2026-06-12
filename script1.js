@@ -53,8 +53,15 @@ function updateMsg(){
 }
 
 function move(){
-    const x = Math.random() * (window.innerWidth - 150);
-    const y = Math.random() * (window.innerHeight - 150);
+
+    const maxX = window.innerWidth - 250;
+    const minX = 20;
+
+    const minY = 180;
+    const maxY = window.innerHeight - 250;
+
+    const x = Math.random() * (maxX - minX) + minX;
+    const y = Math.random() * (maxY - minY) + minY;
 
     container.style.left = x + "px";
     container.style.top = y + "px";

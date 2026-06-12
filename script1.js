@@ -54,12 +54,18 @@ function updateMsg(){
 
 function move(){
 
-  const range = 250; // حجم الهروب
+  const rect = container.getBoundingClientRect();
 
-  const x = (Math.random() * range * 2) - range;
-  const y = (Math.random() * range * 2) - range;
+  const maxX = window.innerWidth - rect.width;
+  const maxY = window.innerHeight - rect.height;
 
-  container.style.transform = `translate(${x}px, ${y}px)`;
+  const x = Math.random() * maxX;
+  const y = Math.random() * maxY;
+
+  container.style.left = x + "px";
+  container.style.top = y + "px";
+
+  container.style.transform = "none";
 
   updateMsg();
 }

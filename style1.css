@@ -35,8 +35,11 @@ body{
     padding-top:60px;
     overflow:hidden;
 }
+/* =========================
+   IMPORTANT FIX (YES MOVE JS)
+========================= */
 #container{
-    position:absolute;
+    position:absolute;   /* IMPORTANT pour ton JS */
     left:50%;
     top:220px;
     transform:translateX(-50%);

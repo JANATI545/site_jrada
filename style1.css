@@ -242,8 +242,3 @@ p{
         bottom:20px;
     }
 }
-@media (max-width:768px){
-    #yes{
-        margin-bottom: 50px;
-    }
-}
